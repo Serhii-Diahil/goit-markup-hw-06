@@ -289,11 +289,14 @@ address {
   color: #404bbf;
 }
 
+.mobile-menu-contacts {
+  margin-bottom: 48px;
+}
+
 .mobile-menu-contacts-list {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  margin-bottom: 48px;
 }
 
 .mobile-menu-contacts-link {
@@ -301,11 +304,11 @@ address {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  color: #434455;
+  color: #4d5ae5;
 }
 
 .mobile-menu-contacts-link-current {
-  color: #4d5ae5;
+  color: #434455;
 }
 
 .mobile-menu-icon-list {
@@ -352,7 +355,10 @@ address {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  padding: 72px 52px;
+  max-width: 320px;
 }
+
 @media screen and (-webkit-min-device-pixel-ratio: 2),
   (min-resolution: 2dppx),
   (min-resolution: 192dpi) {
@@ -364,10 +370,6 @@ address {
       ),
       url(../images/Dark-bg-mob-2x.jpg);
   }
-}
-
-.container-hero {
-  padding: 72px 52px;
 }
 
 .hero-title {
@@ -410,6 +412,8 @@ address {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    padding: 112px 136px;
+    max-width: 768px;
   }
 
   @media screen and (-webkit-min-device-pixel-ratio: 2),
@@ -423,9 +427,6 @@ address {
         ),
         url(../images/Dark-bg-tab-2x.jpg);
     }
-  }
-  .container-hero {
-    padding: 112px 136px;
   }
 
   .hero-title {
@@ -456,6 +457,7 @@ address {
     max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
+    padding: 188px 0;
   }
 
   @media screen and (-webkit-min-device-pixel-ratio: 2),
@@ -469,9 +471,6 @@ address {
         ),
         url(../images/people-office-2x.jpg);
     }
-  }
-  .container-hero {
-    padding: 188px 0;
   }
 
   .hero-title {
@@ -593,6 +592,7 @@ address {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  /* justify-content: center; */
   gap: 72px;
 }
 
@@ -792,6 +792,7 @@ address {
   }
 
   .portfolio-item-text {
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
@@ -819,7 +820,12 @@ address {
 .footer-container {
   display: flex;
   flex-wrap: wrap;
-  /* align-items: baseline; */
+  justify-content: center;
+  gap: 72px 24px;
+}
+
+.footer-container-logo {
+  width: 288px;
 }
 
 .footer-link-logo {
@@ -830,7 +836,6 @@ address {
 
 .footer-logo-part {
   color: #f4f4fd;
-  margin-bottom: 16px;
 }
 
 .footer-text {
@@ -839,10 +844,6 @@ address {
   letter-spacing: 0.02em;
   color: #f4f4fd;
   max-width: 264px;
-}
-
-.footer-container-soc {
-  padding: 72px 40px;
 }
 
 .footer-subtitle {
@@ -893,6 +894,7 @@ address {
 .footer-modal-form {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 16px;
 }
 
@@ -948,16 +950,67 @@ address {
 
 @media screen and (min-width: 768px) {
   .footer {
+    padding: 96px 108px;
   }
 
   .footer-container {
-    padding: 0px 108px;
+    justify-content: flex-start;
+  }
+
+  .footer-link-logo {
+    justify-content: flex-start;
+  }
+
+  .footer-subtitle,
+  .footer-modal-title {
+    text-align: left;
   }
 
   .footer-modal-input {
     width: 264px;
   }
 }
+
+@media screen and (min-width: 1158px) {
+  .footer-container {
+    padding: 0px 15px;
+    gap: 0;
+    /* display: flex; */
+    flex-wrap: nowrap;
+  }
+
+  .footer-container-logo {
+    margin-right: 120px;
+  }
+
+  .footer-icon-link:hover {
+    background-color: #31d0aa;
+  }
+
+  .footer-icon-link:focus {
+    background-color: #31d0aa;
+  }
+
+  .footer-modal-form {
+    flex-wrap: nowrap;
+    justify-content: start;
+    gap: 24px;
+  }
+
+  .footer-modal-input {
+    width: 264px;
+    height: 40px;
+  }
+
+  .footer-container-soc {
+    margin-right: 80px;
+  }
+
+  .footer-modal-input:focus {
+    border-color: #31d0aa;
+  }
+}
+
 /*-----------------------*/
 
 /*--------MODAL------------*/
@@ -1102,6 +1155,8 @@ address {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
+  display: flex;
+  align-items: center;
 }
 
 .modal-check-span {
@@ -1117,6 +1172,7 @@ address {
   justify-content: center;
   fill: transparent;
   margin-right: 8px;
+  flex-shrink: 0;
 }
 
 .modal-check:checked + .modal-check-text > .modal-check-span {
@@ -1185,13 +1241,12 @@ address {
   }
 
   .modal-check:checked + .modal-check-text > .modal-check-span {
-  background-color: #404bbf;
-  border: none;
-  fill: #f4f4fd;
-}
-.modal-btn:hover,
-.modal-btn:focus {
-  background-color: #404bbf;
-}
-
+    background-color: #404bbf;
+    border: none;
+    fill: #f4f4fd;
+  }
+  .modal-btn:hover,
+  .modal-btn:focus {
+    background-color: #404bbf;
+  }
 }
